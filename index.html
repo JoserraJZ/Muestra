@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar El Sabor</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body class="fondo-taberna">
+  <!-- Fondo dinámico por scroll: capas que se mezclan en función del progreso de scroll -->
+  <div class="bg-stack" aria-hidden="true"></div>
+  <div class="fondo-overlay"></div>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Bar El Sabor</h1>
+      <p>Donde el sabor y el ambiente se encuentran</p>
+      <a href="#carta" class="btn">Ver la carta</a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#info">Nosotros</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="carta" class="section">
+      <h2>Nuestra Carta</h2>
+
+      <div class="menu-wrapper">
+        <a href="menu.html#entrantes" class="menu-item category-card">
+          <h3 class="plato">🥗 Entrantes</h3>
+          <p>Descubre nuestros deliciosos entrantes</p>
+        </a>
+        <a href="menu.html#primeros" class="menu-item category-card">
+          <h3 class="plato">🍽️ Primeros</h3>
+          <p>Platos principales para empezar</p>
+        </a>
+        <a href="menu.html#segundos" class="menu-item category-card">
+          <h3 class="plato">🥩 Segundos</h3>
+          <p>Especialidades de la casa</p>
+        </a>
+        <a href="menu.html#postres" class="menu-item category-card">
+          <h3 class="plato">🍰 Postres</h3>
+          <p>Dulces tentaciones</p>
+        </a>
+        <a href="menu.html#cafes" class="menu-item category-card">
+          <h3 class="plato">☕ Cafés</h3>
+          <p>Para terminar con energía</p>
+        </a>
+        <a href="menu.html#bebidas" class="menu-item category-card">
+          <h3 class="plato">🍹 Bebidas</h3>
+          <p>Refrescos y bebidas alcohólicas</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="info" class="section dark">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos un bar con alma andaluza, donde cada plato cuenta una historia y cada noche se convierte en recuerdo. Inspirados en las tabernas de Madrid y Jerez, ofrecemos una experiencia gastronómica auténtica con productos frescos y recetas tradicionales.</p>
+    </section>
+
+    <section id="ubicacion" class="section">
+      <h2>¿Dónde estamos?</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación Bar El Sabor"></iframe>
+    </section>
+
+    <section id="contacto" class="section dark">
+      <h2>Contacto</h2>
+      <p class="contacto-subtitle">Estamos encantados de atenderte</p>
+      <div class="contacto-grid">
+        <a class="contacto-card" href="tel:+34600000000">
+          <div class="icon" aria-hidden="true">📞</div>
+          <div class="info">
+            <span class="label">Teléfono</span>
+            <span class="value">600 000 000</span>
+          </div>
+        </a>
+        <a class="contacto-card" href="mailto:info@barelsabor.com">
+          <div class="icon" aria-hidden="true">📧</div>
+          <div class="info">
+            <span class="label">Email</span>
+            <span class="value">info@barelsabor.com</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bar El Sabor · Jerez de la Frontera</p>
+  </footer>
+
+  <!-- Modal global para detalles de plato -->
+  <div id="plato-modal" class="modal-overlay" aria-hidden="true" tabindex="-1">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="plato-title">
+      <div class="modal-header">
+        <h3 id="plato-title" class="modal-title">Título del plato</h3>
+        <button class="modal-close" aria-label="Cerrar" type="button">×</button>
+      </div>
+      <div class="modal-body">
+        <img id="plato-img" src="" alt="Foto del plato" />
+        <div class="modal-info">
+          <h4>Ingredientes</h4>
+          <ul id="plato-ingredientes"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

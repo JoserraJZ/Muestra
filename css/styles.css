@@ -1,0 +1,492 @@
+/* Tipografía y colores */
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+  scroll-behavior: smooth; /* Hace que el enlace a Entrantes tenga desplazamiento suave */
+}
+
+body.fondo-taberna {
+  background: url('../images/taberna.jpg') center center / cover no-repeat fixed;
+}
+
+body.menu-page {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.btn-volver {
+  background-color: #c49a6c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-volver:hover {
+  background-color: #b8885a;
+}
+
+.btn-salir {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.btn-salir:hover {
+  color: #c49a6c;
+}
+
+.menu-content {
+  padding: 6rem 2rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-content h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Fondo dinámico por scroll: contenedor fijo en toda la ventana */
+.bg-stack {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  z-index: -2; /* detrás del overlay y del contenido */
+  pointer-events: none; /* no intercepta clics */
+}
+
+/* Cada capa muestra una imagen a pantalla completa */
+.bg-stack .bg-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover; /* ocupa toda la pantalla */
+  background-position: center center; /* centrada en móvil y escritorio */
+  background-repeat: no-repeat;
+  opacity: 0; /* se gestiona vía JS según el scroll */
+  transition: opacity 300ms ease; /* suaviza los cambios */
+  will-change: opacity; /* hint de rendimiento */
+  /* Opcional: ajustar el tono del fondo ligeramente
+  filter: saturate(1.05) contrast(1.05) brightness(0.95);
+  */
+}
+
+.fondo-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero principal */
+.hero {
+  background: url('../images/hero.jpg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Botón */
+.btn {
+  background-color: #c49a6c;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+
+/* Navegación */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #c49a6c;
+  font-weight: bold;
+}
+
+/* Secciones */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid rgba(196, 154, 108, 0.1);
+  margin-bottom: 2rem;
+}
+
+.section.dark {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid rgba(196, 154, 108, 0.1);
+  padding: 3rem 2rem;
+}
+
+.section.dark p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Títulos de sección de la carta */
+#carta > h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+#carta > h3 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #c49a6c;
+  text-align: center;
+}
+
+/* 1. Título "Nuestra Carta" en negro */
+#carta h2 {
+  color: #111;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* 2. Separar la carta de la navbar */
+.section#carta {
+  margin-top: 2.5rem;
+}
+
+/* Si el fondo blanco es de .menu-wrapper, puedes reforzar: */
+.menu-wrapper {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Menú: envoltorio y cuadrícula */
+.menu-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.menu-item {
+  background-color: rgba(255, 248, 240, 0.95);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 280px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  border: 1px solid rgba(196, 154, 108, 0.2);
+}
+.menu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  background-color: rgba(255, 248, 240, 1);
+}
+
+/* Nombres de platos */
+.menu-item h3.plato {
+  font-size: 1.1rem;
+  color: #8B0000;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* Pie de página */
+footer {
+  background-color: rgba(34, 34, 34, 0.9);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Modal de detalles de plato */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none; /* se activa con .open */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+.modal-overlay.open { display: flex; }
+
+.modal-card {
+  background: #fffaf2;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  max-width: 720px;
+  width: 100%;
+  overflow: hidden;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #c49a6c;
+  color: #fff;
+}
+.modal-title {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+}
+.modal-close {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+.modal-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.modal-info h4 { margin: 0.25rem 0 0.5rem; }
+.modal-info ul { margin: 0; padding-left: 1.1rem; }
+
+@media (max-width: 640px) {
+  .modal-body { grid-template-columns: 1fr; }
+}
+
+/* Contacto */
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 0.25rem;
+}
+
+.contacto-subtitle {
+  text-align: center;
+  color: #555;
+  margin: 0 0 1rem 0;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contacto-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(255, 248, 240, 0.95);
+  padding: 1.5rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(196, 154, 108, 0.2);
+}
+
+.contacto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  background-color: rgba(255, 248, 240, 1);
+}
+
+.contacto-card .icon {
+  font-size: 1.8rem;
+}
+
+.contacto-card .label {
+  font-weight: bold;
+  color: #c49a6c;
+  line-height: 1.1;
+}
+
+.contacto-card .value {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Estilos para la carta tradicional */
+.menu-tradicional {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu-tradicional h3 {
+  font-size: 1.8rem;
+  color: #c49a6c;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #c49a6c;
+  padding-bottom: 0.5rem;
+}
+
+.menu-items {
+  margin-bottom: 2rem;
+}
+
+.menu-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.menu-line:last-child {
+  border-bottom: none;
+}
+
+.dish-name {
+  font-weight: 500;
+  color: #333;
+  flex: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.dish-name:hover {
+  color: #c49a6c;
+}
+
+.dish-price {
+  font-weight: bold;
+  color: #8B0000;
+  text-align: right;
+  min-width: 60px;
+}
+
+iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Hace que el scroll ancle la sección justo debajo de la navbar */
+html {
+  scroll-padding-top: 80px; /* Ajusta 80px al alto real de tu navbar */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .menu-item {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .menu-line {
+    padding: 0.75rem 0;
+  }
+
+  .dish-name {
+    font-size: 1rem;
+  }
+
+  .dish-price {
+    font-size: 1rem;
+  }
+}

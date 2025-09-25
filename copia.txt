@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar El Sabor</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body class="fondo-taberna">
+  <div class="fondo-overlay"></div>
+
+  <header class="hero">
+    <div class="overlay">
+      <h1>Bar El Sabor</h1>
+      <p>Donde el sabor y el ambiente se encuentran</p>
+      <a href="#carta" class="btn">Ver la carta</a>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#carta">Carta</a></li>
+      <li><a href="#info">Nosotros</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="carta" class="section">
+      <h2>Nuestra Carta</h2>
+
+      <h3>🥗 Entrantes</h3>
+      <div class="menu-wrapper">
+        <div class="menu-item"><h3 class="plato">Nachos con queso</h3><p>Con jalapeños y guacamole</p><span>5,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Patatas bravas</h3><p>Con salsa picante casera</p><span>4,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Croquetas caseras</h3><p>De jamón ibérico</p><span>4,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Ensaladilla rusa</h3><p>Con atún y mayonesa suave</p><span>3,80 €</span></div>
+        <div class="menu-item"><h3 class="plato">Queso curado</h3><p>Con aceite de oliva y orégano</p><span>5,00 €</span></div>
+      </div>
+
+      <h3>🍽️ Primeros</h3>
+      <div class="menu-wrapper">
+        <div class="menu-item"><h3 class="plato">Ensalada mixta</h3><p>Lechuga, tomate, huevo y atún</p><span>4,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Sopa del día</h3><p>Pregunta al camarero</p><span>3,80 €</span></div>
+        <div class="menu-item"><h3 class="plato">Macarrones boloñesa</h3><p>Con carne picada y tomate</p><span>6,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Gazpacho andaluz</h3><p>Fresco y tradicional</p><span>4,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Revuelto de setas</h3><p>Con huevo y ajo</p><span>5,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Arroz con verduras</h3><p>Colorido y sabroso</p><span>5,80 €</span></div>
+        <div class="menu-item"><h3 class="plato">Espaguetis carbonara</h3><p>Con nata y bacon</p><span>6,20 €</span></div>
+        <div class="menu-item"><h3 class="plato">Huevos rotos</h3><p>Con jamón y patatas</p><span>5,90 €</span></div>
+      </div>
+
+      <h3>🥩 Segundos</h3>
+      <div class="menu-wrapper">
+        <div class="menu-item"><h3 class="plato">Ternera a la plancha</h3><p>Con guarnición</p><span>8,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Pollo al ajillo</h3><p>Receta tradicional</p><span>7,80 €</span></div>
+        <div class="menu-item"><h3 class="plato">Pescado frito</h3><p>Del día, estilo andaluz</p><span>8,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Albóndigas en salsa</h3><p>Con patatas fritas</p><span>7,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Filete de cerdo</h3><p>Con mojo picón</p><span>7,20 €</span></div>
+        <div class="menu-item"><h3 class="plato">Hamburguesa casera</h3><p>Con queso curado</p><span>7,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Paella individual</h3><p>De marisco o mixta</p><span>9,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Tortilla española</h3><p>Con cebolla o sin</p><span>5,50 €</span></div>
+      </div>
+
+      <h3>🍰 Postres</h3>
+      <div class="menu-wrapper">
+        <div class="menu-item"><h3 class="plato">Arroz con leche</h3><p>Con canela</p><span>3,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Tarta de queso</h3><p>Con mermelada de frutos rojos</p><span>4,00 €</span></div>
+        <div class="menu-item"><h3 class="plato">Flan casero</h3><p>Con caramelo</p><span>3,20 €</span></div>
+        <div class="menu-item"><h3 class="plato">Helado variado</h3><p>Chocolate, vainilla, fresa</p><span>3,80 €</span></div>
+        <div class="menu-item"><h3 class="plato">Brownie</h3><p>Con nueces y sirope</p><span>4,20 €</span></div>
+      </div>
+
+      <h3>☕ Cafés</h3>
+      <div class="menu-wrapper">
+        <div class="menu-item"><h3 class="plato">Café solo</h3><p>Intenso y aromático</p><span>1,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Café con leche</h3><p>Equilibrado</p><span>1,80 €</span></div>
+        <div class="menu-item"><h3 class="plato">Café cortado</h3><p>Un toque de leche</p><span>1,60 €</span></div>
+        <div class="menu-item"><h3 class="plato">Capuchino</h3><p>Con espuma cremosa</p><span>2,20 €</span></div>
+        <div class="menu-item"><h3 class="plato">Carajillo</h3><p>Con licor</p><span>2,50 €</span></div>
+      </div>
+
+      <h3>🍹 Bebidas</h3>
+      <div class="menu-wrapper">
+        <div class="menu-item"><h3 class="plato">Refrescos</h3><p>Coca-Cola, Fanta, Sprite</p><span>2,00 €</span></div>
+                <div class="menu-item"><h3 class="plato">Cervezas</h3><p>Mahou, Cruzcampo, Alhambra</p><span>2,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Vino tinto</h3><p>Selección de la casa</p><span>3,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Vino blanco</h3><p>Frío y afrutado</p><span>3,50 €</span></div>
+        <div class="menu-item"><h3 class="plato">Agua mineral</h3><p>Con o sin gas</p><span>1,50 €</span></div>
+      </div>
+    </section>
+
+    <section id="info" class="section dark">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos un bar con alma andaluza, donde cada plato cuenta una historia y cada noche se convierte en recuerdo. Inspirados en las tabernas de Madrid y Jerez, ofrecemos una experiencia gastronómica auténtica con productos frescos y recetas tradicionales.</p>
+    </section>
+
+    <section id="ubicacion" class="section">
+      <h2>¿Dónde estamos?</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <section id="contacto" class="section dark">
+      <h2>Contacto</h2>
+      <p class="contacto-subtitle">Estamos encantados de atenderte</p>
+      <div class="contacto-grid">
+        <a class="contacto-card" href="tel:+34600000000">
+          <div class="icon">📞</div>
+          <div class="info">
+            <span class="label">Teléfono</span>
+            <span class="value">600 000 000</span>
+          </div>
+        </a>
+        <a class="contacto-card" href="mailto:info@barelsabor.com">
+          <div class="icon">📧</div>
+          <div class="info">
+            <span class="label">Email</span>
+            <span class="value">info@barelsabor.com</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bar El Sabor · Jerez de la Frontera</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
